@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration form</title>
+</head>
+<body>
+    
+    <main id="registration">
+        <form action="/register" method="POST">
+            <fieldset>
+                <legend>Личные данные</legend>
+                <label for="name">Имя:</label>
+                <input type="text" name="name" id="name" minlength="2" maxlength="50" placeholder="Mickey" autofocus autocomplete="given-name" required>
+
+                <label for="surname">Фамилия:</label>
+                <input type="text" name="surname" id="surname" placeholder="Mouse" autocomplete="family-name" required>
+
+                <label for="birthdate">Дата рождения:</label>
+                <input type="date" name="birthdate" id="birthdate" required>
+
+                <fieldset>
+                    <legend>Пол:</legend>
+                    <label><input type="radio" name="gender" value="other" required>Не указан</label>
+                    <label><input type="radio" name="gender" value="male" required>Мужской</label>
+                    <label><input type="radio" name="gender" value="female" required>Женский</label>
+                </fieldset>
+
+                <label for="country">Страна:</label>
+                <select name="country" id="country" required>
+                    <option value="">Выбери страну</option>
+                    <option value="kz">Казахстан</option>
+                    <option value="ru">Россия</option>
+                    <option value="gb">Англия</option>
+                    <option value="tr">Турция</option>
+                    <option value="ge">Грузия</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>Учетная запись</legend>
+                
+                <label for="email">Эл. почта:</label>
+                <input type="email" name="email" id="email" placeholder="example@domain.com" autocomplete="email" required>
+
+                <label for="password">Пароль:</label>
+                <input type="password" name="password" id="password" minlength="8" required>
+
+                <label for="password-confirm">Повторите пароль:</label>
+                <input type="password" name="password-confirm" id="password-confirm" minlength="8" required>
+
+                <label for="avatar">Аватар:</label>
+                <input type="file" name="avatar" id="avatar" accept="image/*">
+
+                <label for="aboutme">О себе:</label>
+                <textarea name="aboutme" id="aboutme" maxlength="500" placeholder="Расскажи о себе:"></textarea>
+
+                <fieldset>
+                    <legend>Хобби:</legend> 
+                    <label><input type="checkbox" name="hobbies" value="coding">Программирование</label>
+                    <label><input type="checkbox" name="hobbies" value="sport">Спорт</label>
+                    <label><input type="checkbox" name="hobbies" value="reading">Книги</label>
+                    <label><input type="checkbox" name="hobbies" value="movies">Фильмы</label>  
+                </fieldset>
+
+                <label for="policy"><input type="checkbox" name="policy" id="policy" required>Я согласен с условиями политики</label>
+
+                <label for="mailing"><input type="checkbox" name="mailing" id="mailing">Подписаться на рассылку новостей</label>
+            </fieldset>
+
+            <button type="submit">Отправить</button>
+            <button type="reset">Очистить</button>
+        </form>
+    </main>
+
+</body>
+</html>
