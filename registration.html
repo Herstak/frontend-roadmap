@@ -7,67 +7,80 @@
   </head>
   <body>
     <main id="registration">
-      <form class="form form__group" action="/register" method="POST">
+      <form class="registration-form" action="/register" method="POST">
         <!-- Personal Data Section -->
-        <fieldset class="form__group">
-          <legend>Личные данные</legend>
-          <label class="form__label" for="name">Имя:</label>
-          <input
-            class="form__input"
-            type="text"
-            name="name"
-            id="name"
-            minlength="2"
-            maxlength="50"
-            placeholder="Mickey"
-            autofocus
-            autocomplete="given-name"
-            required
-          />
+        <fieldset class="registration-form__section">
+          <legend class="registration-form__section-title">
+            Личные данные
+          </legend>
 
-          <label class="form__label" for="surname">Фамилия:</label>
-          <input
-            class="form__input"
-            type="text"
-            name="surname"
-            id="surname"
-            placeholder="Mouse"
-            autocomplete="family-name"
-            required
-          />
+          <div class="registration-form__field">
+            <label class="registration-form__label" for="name">Имя:</label>
+            <input
+              class="registration-form__input"
+              type="text"
+              name="name"
+              id="name"
+              minlength="2"
+              maxlength="50"
+              placeholder="Mickey"
+              autofocus
+              autocomplete="given-name"
+              required
+            />
+          </div>
 
-          <label class="form__label" for="birthdate">Дата рождения:</label>
-          <input
-            class="form__input"
-            type="date"
-            name="birthdate"
-            id="birthdate"
-            required
-          />
+          <div class="registration-form__field">
+            <label class="registration-form__label" for="surname"
+              >Фамилия:</label
+            >
+            <input
+              class="registration-form__input"
+              type="text"
+              name="surname"
+              id="surname"
+              placeholder="Mouse"
+              autocomplete="family-name"
+              required
+            />
+          </div>
 
-          <fieldset class="form__group">
-            <legend>Пол:</legend>
-            <label class="form__label"
+          <div class="registration-form__field">
+            <label class="registration-form__label" for="birthdate"
+              >Дата рождения:</label
+            >
+            <input
+              class="registration-form__input"
+              type="date"
+              name="birthdate"
+              id="birthdate"
+              required
+            />
+          </div>
+
+          <fieldset class="registration-form__group">
+            <legend class="registration-form__group-title">Пол:</legend>
+            <label class="registration-form__radio-label"
               ><input
-                class="form__input"
+                class="registration-form__radio"
                 type="radio"
                 name="gender"
                 value="other"
                 required
               />Не указан</label
             >
-            <label class="form__label"
+            <label class="registration-form__radio-label"
               ><input
-                class="form__input"
+                class="registration-form__radio"
                 type="radio"
                 name="gender"
                 value="male"
                 required
               />Мужской</label
             >
-            <label class="form__label"
+            <label class="registration-form__radio-label"
               ><input
-                class="form__input"
+                class="registration-form__radio"
                 type="radio"
                 name="gender"
                 value="female"
@@ -76,7 +89,7 @@
             >
           </fieldset>
 
-          <label class="form__label" for="country">Страна:</label>
+          <label class="registration-form__label" for="country">Страна:</label>
           <select name="country" id="country" required>
             <option value="">Выбери страну</option>
             <option value="kz">Казахстан</option>
@@ -88,12 +101,14 @@
         </fieldset>
 
         <!-- Account Section -->
-        <fieldset class="form__group">
-          <legend>Учетная запись</legend>
+        <fieldset class="registration-form__section">
+          <legend class="registration-form__section-title">
+            Учетная запись
+          </legend>
 
-          <label class="form__label" for="email">Эл. почта:</label>
+          <label class="registration-form__label" for="email">Эл. почта:</label>
           <input
-            class="form__input"
+            class="registration-form__input"
             type="email"
             name="email"
             id="email"
@@ -102,9 +117,9 @@
             required
           />
 
-          <label class="form__label" for="password">Пароль:</label>
+          <label class="registration-form__label" for="password">Пароль:</label>
           <input
-            class="form__input"
+            class="registration-form__input"
             type="password"
             name="password"
             id="password"
@@ -112,11 +127,11 @@
             required
           />
 
-          <label class="form__label" for="password-confirm"
+          <label class="registration-form__label" for="password-confirm"
             >Повторите пароль:</label
           >
           <input
-            class="form__input"
+            class="registration-form__input"
             type="password"
             name="password-confirm"
             id="password-confirm"
@@ -124,16 +139,16 @@
             required
           />
 
-          <label class="form__label" for="avatar">Аватар:</label>
+          <label class="registration-form__label" for="avatar">Аватар:</label>
           <input
-            class="form__input"
+            class="registration-form__input"
             type="file"
             name="avatar"
             id="avatar"
             accept="image/*"
           />
 
-          <label class="form__label" for="aboutme">О себе:</label>
+          <label class="registration-form__label" for="aboutme">О себе:</label>
           <textarea
             name="aboutme"
             id="aboutme"
@@ -142,35 +157,35 @@
           ></textarea>
 
           <!-- About me Section -->
-          <fieldset class="form__group">
-            <legend>Хобби:</legend>
-            <label class="form__label"
+          <fieldset class="registration-form__group">
+            <legend class="registration-form__group-title">Хобби:</legend>
+            <label class="registration-form__label"
               ><input
-                class="form__input"
+                class="registration-form__input"
                 type="checkbox"
                 name="hobbies"
                 value="coding"
               />Программирование</label
             >
-            <label class="form__label"
+            <label class="registration-form__label"
               ><input
-                class="form__input"
+                class="registration-form__input"
                 type="checkbox"
                 name="hobbies"
                 value="sport"
               />Спорт</label
             >
-            <label class="form__label"
+            <label class="registration-form__label"
               ><input
-                class="form__input"
+                class="registration-form__input"
                 type="checkbox"
                 name="hobbies"
                 value="reading"
               />Книги</label
             >
-            <label class="form__label"
+            <label class="registration-form__label"
               ><input
-                class="form__input"
+                class="registration-form__input"
                 type="checkbox"
                 name="hobbies"
                 value="movies"
@@ -178,9 +193,9 @@
             >
           </fieldset>
 
-          <label class="form__label" for="policy"
+          <label class="registration-form__label" for="policy"
             ><input
-              class="form__input"
+              class="registration-form__input"
               type="checkbox"
               name="policy"
               id="policy"
@@ -188,9 +203,9 @@
             />Я согласен с условиями политики</label
           >
 
-          <label class="form__label" for="mailing"
+          <label class="registration-form__label" for="mailing"
             ><input
-              class="form__input"
+              class="registration-form__input"
               type="checkbox"
               name="mailing"
               id="mailing"
@@ -198,8 +213,12 @@
           >
         </fieldset>
 
-        <button class="form__button" type="submit">Отправить</button>
-        <button class="form__button" type="reset">Очистить</button>
+        <button class="registration-form__button--primary" type="submit">
+          Отправить
+        </button>
+        <button class="registration-form__button--secondary" type="reset">
+          Очистить
+        </button>
       </form>
     </main>
   </body>
