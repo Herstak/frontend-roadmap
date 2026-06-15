@@ -1,0 +1,14 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    transition: background-color 0.4s ease;
+}
+
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: white;
+}

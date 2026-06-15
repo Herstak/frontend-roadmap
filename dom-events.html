@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Events</title>
+    <link rel="stylesheet" href="events-styles.css">
+</head>
+<body>
+    <h1>DOM События</h1>
+
+    <section>
+        <h2>Счетчик: <span id="counter">0</span></h2>
+        <button id="increment">+1</button>
+        <button id="decrement">-1</button>
+        <button id="reset">Сброс</button>
+    </section>
+
+    <section>
+        <button id="theme-toggle">Переключить тему 🌙</button>
+    </section>
+
+    <section>
+        <form id="greet-form">
+            <label for="name-input">Твое имя:</label>
+            <input type="text" id="name-input" placeholder="Введи имя">
+            <button type="submit">Поздороваться</button>
+        </form>
+        <p id="greeting"></p>
+    </section>
+
+    <section>
+        <label for="live-input">Печатай здесь:</label>
+        <input type="text" id="live-input">
+        <p>Ты ввел: <span id="live-output"></span></p>
+    </section>
+
+    <script src="dom-events.js"></script>
+</body>
+</html>
