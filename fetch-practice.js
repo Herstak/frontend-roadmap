@@ -76,8 +76,8 @@ async function getUserWithPosts(userId) {
             throw new Error("Один из запросов не удался");
         }
 
-        const user = await responseUserId.json();
-        const posts = await responseUserPosts.json();
+        const user = await userResponse.json();
+        const posts = await postResponse.json();
 
         console.log(`${user.name} написал(а) ${posts.length} постов.`);
     } catch (error) {
